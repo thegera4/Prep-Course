@@ -29,45 +29,57 @@ function devolverString(str) {
   // "Return" la string provista: str
   // Tu código:
   return str
-  
-}
+  }
 
 function suma(x, y) {
   // "x" e "y" son números
   // Suma "x" e "y" juntos y devuelve el valor
   // Tu código:
-  
+  var suma = x + y
+  return suma
 }
 
 function resta(x, y) {
   // Resta "y" de "x" y devuelve el valor
   // Tu código:
-  
+  var resta = x - y 
+  return resta  
 }
 
 function multiplica(x, y) {
   // Multiplica "x" por "y" y devuelve el valor
   // Tu código:
-  
+  var multiplicacion = x * y
+  return multiplicacion  
 }
 
 function divide(x, y) {
   // Divide "x" entre "y" y devuelve el valor
   // Tu código:
-  
+  var division = x / y
+  return division  
 }
 
 function sonIguales(x, y) {
   // Devuelve "true" si "x" e "y" son iguales
   // De lo contrario, devuelve "false"
   // Tu código:
-  
+  if ( x === y ){
+    return true
+  } else {
+    return false
+  }
 }
 
 function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
+  if(str1.length == str2.length){
+    return true
+  } else {
+    return false
+  }
   
 }
 
@@ -75,6 +87,11 @@ function menosQueNoventa(num) {
   // Devuelve "true" si el argumento de la función "num" es menor que noventa
   // De lo contrario, devuelve "false"
   // Tu código:
+  if( num < 90 ){
+    return true
+  } else {
+    return false
+  }
   
 }
 
@@ -82,19 +99,29 @@ function mayorQueCincuenta(num) {
   // Devuelve "true" si el argumento de la función "num" es mayor que cincuenta
   // De lo contrario, devuelve "false"
   // Tu código:
-  
+  if( num > 50 ){
+    return true
+  } else {
+    return false
+  }
 }
 
 function obtenerResto(x, y) {
   // Obten el resto de la división de "x" entre "y"
   // Tu código:
-  
+  var mod = x % y
+  return mod
 }
 
 function esPar(num) {
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
+  if( num % 2 == 0 ){
+    return true
+  } else {
+    return false
+  }
   
 }
 
@@ -102,44 +129,55 @@ function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
-  
+  if( num % 2 > 0 ){
+    return true
+  } else {
+    return false
+  }
 }
 
 function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
-  
+  var elevadoCuadrado = Math.pow(num, 2)
+  return elevadoCuadrado  
 }
 
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
-  
+  var elevadoCubo = Math.pow(num, 3)
+  return elevadoCubo  
 }
 
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
+  var elevadoExponente = Math.pow(num, exponent)
+  return elevadoExponente  
   
 }
 
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
-  
+  var redondeo = Math.round(num)
+  return redondeo
 }
 
 function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
-  
+  var redondeo = Math.ceil(num)
+  return redondeo
 }
 
 function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
-  
+  var numeroAzar = Math.random()
+  return numeroAzar
 }
 
 function esPositivo(numero) {
@@ -147,13 +185,22 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-  
+  if(numero > 0){
+    return "Es positivo"
+  } else if (numero < 0){
+    return "Es negativo"
+  } else {
+    return false
+  }
+
 }
 
 function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
+  var cadena = str + "!"
+  return cadena
 }
 
 function combinarNombres(nombre, apellido) {
