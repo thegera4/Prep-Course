@@ -220,9 +220,9 @@ function doWhile(numero) {
   var i = 0
   do{
     i++
-    nuevoValor = numero + 5
+    numero = numero + 5
   } while ( i < 8)
-  return nuevoValor
+  return numero
 
 }
 
