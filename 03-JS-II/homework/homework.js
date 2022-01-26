@@ -136,6 +136,8 @@ function fizzBuzz(numero) {
       return "fizz"
   } else if((numero % 5) === 0){
       return "buzz"
+  } else {
+    return numero
   }
 }
 
@@ -148,12 +150,12 @@ function operadoresLogicos(num1, num2, num3) {
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
   if(num1 > num2 && num1 > num3 && num1 > 0){
     return "Número 1 es mayor y positivo"
-  } else if(num1 || num2 || num3 < 0){
+  } else if(num1 < 0 || num2 < 0 || num3 < 0){
       return "Hay negativos"
   } else if(num3 > num1 && num3 > num2){
       num3++
       return num3
-  } else if(num1 || num2 || num3 === 0){
+  } else if(num1 === 0 || num2 === 0 || num3 === 0){
       return "Error"
   } else {
     return false
@@ -170,9 +172,10 @@ function esPrimo(numero) {
   for (i = 2; i <= (numero / 2); i++){
       if(numero % i === 0){
         return true  
-      } 
+      } else{
+        return false
+      }
   }
-  return false
 }
 
 function esVerdadero(valor){
@@ -199,7 +202,7 @@ function tablaDelSeis(){
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  if(numero.length === 3){
+  if(numero >= 100 && numero <= 999){
     return true
   } else{
       return false
@@ -210,6 +213,8 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+  var valor = ""
+  var i = 0
   do{
     valor = valor + 5
     i++
