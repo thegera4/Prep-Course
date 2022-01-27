@@ -26,11 +26,11 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
-  var array = [1,2,3,4,5]
+  var nuevoArray = []
   for (i = 0; i < array.length; i++){
-    array[i] = array[i] + 1
+    nuevoArray[i] = array[i] + 1
   }
-  return array
+  return nuevoArray
 }
 
 
@@ -59,8 +59,7 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  var palabras = ["hola", "como", "estas"]
-  var cadena = palabras[0] + " " + palabras[1] + " " + palabras[2]
+  var cadena = palabras.join(" ")
   return cadena
 }
 
@@ -130,13 +129,12 @@ function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
 var elementos = 0
-  for(i = 0; i < arreglolength; i++){
+  for(i = 0; i < arreglo.length; i++){
     if(arreglo[i] > 18){
       elementos++
     }
   }
   return elementos
-
 }
 
 
