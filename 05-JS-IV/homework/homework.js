@@ -31,7 +31,7 @@ function invocarMetodo(objeto, metodo) {
   // Invoca ese método
   // Nada necesita ser devuelto ("returned")
   // Tu código:
-  objeto.metodo();
+  objeto[metodo]();
 
 }
 
@@ -39,7 +39,7 @@ function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
   // "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
-  var producto = objetoMisterioso[numeroMisterioso] * 5;
+  var producto = objetoMisterioso.numeroMisterioso * 5;
   return producto;
 }
 
@@ -48,7 +48,7 @@ function eliminarPropiedad(objeto, unaPropiedad) {
   // tip: tenes que usar bracket notation
   // Devuelve el objeto
   // Tu código:
-  delete obejeto[unaPropiedad];
+  delete objeto[unaPropiedad];
   return objeto;
 }
 
@@ -157,7 +157,7 @@ function agregarMetodoCalculoDescuento(producto) {
   // Tu código:
 
   producto["calcularPrecioDescuento"] = function(){
-    return producto.precio - (producto.precio * producto.procentajeDeDescuento); 
+    return this.precio - (this.precio * this.procentajeDeDescuento); 
   };
   return producto;
 }
