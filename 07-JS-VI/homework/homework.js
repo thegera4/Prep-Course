@@ -10,12 +10,14 @@ function mayuscula(nombre) {
 function invocarCallback(cb) {
   // Invoca al callback `cb`
   //Tu código:
+  cb();
 }
 
 function operacionMatematica(n1, n2, cb) {
   //Vamos a recibir una función que realiza una operación matemática como callback junto con dos números.
   //Devolver el callback pasándole como argumentos los números recibidos.
   //Tu código:
+  return cb(n1, n2)
 }
 
 function sumarArray(numeros, cb) {
@@ -23,6 +25,11 @@ function sumarArray(numeros, cb) {
   // Pasa el resultado a `cb`
   // No es necesario devolver nada
   //Tu código:
+  var suma = 0;
+  numeros.forEach(function(elemento, indice){
+    suma = suma + elemento;
+    cb(suma);
+  })
 }
 
 function forEach(array, cb) {
