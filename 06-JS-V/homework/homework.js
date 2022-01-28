@@ -42,7 +42,7 @@ function agregarStringInvertida() {
 
   String.prototype.reverse = function(){
     var cadena = "";
-    for(var i = String.length; i > 0; i--){
+    for(var i = String.length -1; i >= 0; i--){
       cadena = cadena + String[i]
     }
     return cadena
