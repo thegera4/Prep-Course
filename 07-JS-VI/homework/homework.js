@@ -26,10 +26,10 @@ function sumarArray(numeros, cb) {
   // No es necesario devolver nada
   //Tu código:
   var suma = 0;
-  numeros.forEach(function(elemento, indice){
-    suma = suma + elemento;
-    cb(suma);
-  })
+  for(var i = 0; i < numeros.length; i++) {
+     suma = suma + numeros[i];
+   }
+   cb(suma);
 }
 
 function forEach(array, cb) {
