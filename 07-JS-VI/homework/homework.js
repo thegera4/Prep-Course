@@ -68,7 +68,8 @@ for(var i = 0; i < array.length; i++){
   if (array[i].charAt(0) === "a"){
     nuevoArray.push(array[i])
   }
-  return nuevoArray
+}
+return nuevoArray
 }
 
 // No modificar nada debajo de esta línea
@@ -83,4 +84,3 @@ module.exports = {
   map,
   filter
 };
-}
