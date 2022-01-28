@@ -41,7 +41,11 @@ function agregarStringInvertida() {
   // Pista: Necesitarás usar "this" dentro de "reverse"
 
   String.prototype.reverse = function(){
-    return String.split("").reverse().join("");
+    var cadena = "";
+    for( var i = this.length - 1; i >=0; i--){
+      cadena = cadena + this.charAt(i);
+    }
+    return cadena
   }
 
 }
