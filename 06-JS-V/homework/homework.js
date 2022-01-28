@@ -9,19 +9,18 @@ function crearUsuario() {
   // Devuelve la clase
   // Tu código:
 
-  class Usuario{
-    constructor(opciones){
-      this.usuario = opciones.usuario,
-      this.nombre = opciones.nombre,
-      this.email = opciones.email,
-      this.password = opciones.password
-    }
-    saludar(){
-      return "Hola, mi nombre es " + this.usuario
-    }
+  function Usuario (opciones){
+      this.usuario = opciones.usuario;
+      this.nombre = opciones.nombre;
+      this.email = opciones.email;
+      this.password = opciones.password;
+  }
+  
+  Usuario.prototype.saludar = function(){
+          return "Hola, mi nombre es " + this.usuario;
   }
 
-  return Usuario
+  return Usuario;
 }
 
 function agregarMetodoPrototype(Constructor) {
